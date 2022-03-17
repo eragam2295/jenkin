@@ -23,7 +23,7 @@ pipeline {
     }
 }
     rtUpload {
-    serverId: 'Artifactory-1',
+    serverId: 'artifactory',
     spec: '''{
           "files": [
             {
