@@ -23,7 +23,7 @@ pipeline {
     }
 }
     rtUpload {
-    serverId: 'artifactory',
+    serverId: 'jfrog-platform-1',
     spec: '''{
           "files": [
             {
