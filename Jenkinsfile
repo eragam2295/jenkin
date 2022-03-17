@@ -22,4 +22,14 @@ pipeline {
             }
     }
 }
+    rtUpload (
+    serverId: 'Artifactory-1',
+    spec: '''{
+          "files": [
+            {
+              "pattern": "/var/lib/jenkins/workspace/MBPipeline_master/target/maven-archetype-quickstart-1.4.jar",
+              "target":jenkins-local/"
+            }
+         ]
+    }''',
 }
