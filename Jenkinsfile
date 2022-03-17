@@ -19,6 +19,17 @@ pipeline {
         stage('--package--') {
             steps {
                 sh "mvn package"
+    def server = Artifactory.server artifactory
+
+  def uploadSpec = """{
+    "files": [{
+                "pattern": "/var/lib/jenkins/workspace/MBPipeline_master/target/maven-archetype-quickstart-1.4.jar",
+                "target": "jenkins-local"
+            }
+        ]
+    }"""
+
+  server.upload(uploadSpec)            
             }
         }
     }
