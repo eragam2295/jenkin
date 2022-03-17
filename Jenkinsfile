@@ -19,12 +19,6 @@ pipeline {
         stage('--package--') {
             steps {
                 sh "mvn package"
-                    }
-        ]
-    }"""
-
-  server.upload(uploadSpec)            
             }
-        }
     }
 }
