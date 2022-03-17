@@ -23,7 +23,7 @@ pipeline {
     }
 }
     rtUpload {
-    serverId: 'jfrog-platform-1',
+    serverId: 'jfrog-platform-1'
     spec: '''{
           "files": [
             {
