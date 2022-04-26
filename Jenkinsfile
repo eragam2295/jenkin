@@ -3,7 +3,7 @@ pipeline {
     tools {
         jdk 'java'
         git 'Default'
-        maven 'Maven'
+        maven 'maven'
     }
     stages {
         stage('---clean---') {
